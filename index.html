@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SOCIAL DISTANCE</title>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <link rel="stylesheet" href="sign.css" />
+
+  <script src="sign.js"></script>
+</head>
+
+<body>
+  <div id="page_div" class="page-div">
+    <h1> Physical Distancing Management System</h1>
+    <input type="email" placeholder="email" id="email" />
+    <br>
+    <input type="password" placeholder="password" id="password" />
+    <br>
+    <button onclick="signUp()" id="signUp">Sign Up</button>
+    <br>
+    <button onclick="signIn()" id="signIn">Login</button>
+    <br>
+	   </div>
+
+  <div id="user_div" class="loggedin-div">
+    <div class="head">
+      <h2>WELCOME TO PHYSICAL MANAGEMENT SYSTEM</h2>
+
+  </div>
+
+  <div class="about">
+    <!-- Start of Async Drift Code -->
+<script>
+  "use strict";
+  
+  !function() {
+    var t = window.driftt = window.drift = window.driftt || [];
+    if (!t.init) {
+      if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+      t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+      t.factory = function(e) {
+        return function() {
+          var n = Array.prototype.slice.call(arguments);
+          return n.unshift(e), t.push(n), t;
+        };
+      }, t.methods.forEach(function(e) {
+        t[e] = t.factory(e);
+      }), t.load = function(t) {
+        var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+        o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+        var i = document.getElementsByTagName("script")[0];
+        i.parentNode.insertBefore(o, i);
+      };
+    }
+  }();
+  drift.SNIPPET_VERSION = '0.3.1';
+  drift.load('tcrn6zmewvps');
+  </script>
+  <!-- End of Async Drift Code -->
+    <h3>ABOUT</h3>
+    <pre>
+      Hey User!
+      Here's how exactly our physical distancing website help you!
+      The message box at bottom left corner will provide info
+      about whether the palce you visit take measure againt COVID-19!
+      and alert you if any of person is near you and which palces you can visit.
+      Basically, we aim to alert people
+      to maintain physical distances in public areas
+      alerting them when the distance is less than optimal to ensure the safety
+      and health of individuals and keep them informed
+      about the distance to keep in room. 
+    </pre>
+    <div class="logo">
+      <img src="data:image/png;base64,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">
+      </div>
+  </div>
+    <button onclick="logout()">Logout</button>
+</div>
+
+
+</body>
+
+</html>
